@@ -40,3 +40,41 @@ $fw-bold: 700;
   flex-direction: $direction;
   gap: $gap;
 }
+
+* {
+  box-sizing: border-box;
+  font-family: $ff-main;
+}
+
+html {
+  font-size: $fs-base;
+}
+
+body {
+  background-image: url(/images/bg-pattern-top-mobile.svg),
+    url(/images/bg-pattern-bottom-mobile.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+}
+
+.card {
+  @include flex(column, 0);
+  padding: 5rem 2rem;
+  text-align: center;
+  &__title {
+    font-size: 2rem;
+    color: $clr-primary-magenta;
+    font-weight: $fw-bold;
+  }
+
+  &__paragraph {
+    color: $clr-neutral-gray;
+    line-height: 1.25rem;
+  }
+
+  &__top-right {
+    border: solid red;
+  }
+}

@@ -1,1 +1,35 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.card__title {
+  font-size: 2rem;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+}
+.card__paragraph {
+  color: hsl(303, 10%, 53%);
+  line-height: 1.25rem;
+}
+.card__top-right {
+  border: solid red;
+}/*# sourceMappingURL=style.css.map */
