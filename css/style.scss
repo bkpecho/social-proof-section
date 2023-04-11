@@ -178,9 +178,10 @@ body {
       @include flex(row, 10rem);
       text-align: left;
       justify-content: space-between;
+      gap: 0;
 
       &-left {
-        flex: 1;
+        width: 420px;
         gap: 1.8rem;
       }
 
@@ -216,6 +217,10 @@ body {
       flex-direction: row;
       gap: 2rem;
       align-items: flex-start;
+
+      & > * {
+        flex: 1;
+      }
 
       & .card__container:nth-child(2) {
         margin-top: 1rem;
