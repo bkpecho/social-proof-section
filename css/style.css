@@ -47,7 +47,7 @@ body {
   background-color: hsl(300, 24%, 96%);
 }
 .card__rate {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   color: hsl(300, 43%, 22%);
   font-weight: 700;
 }
@@ -57,14 +57,37 @@ body {
   gap: 1rem;
 }
 .card__bottom .card__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   color: hsl(0, 0%, 100%);
   background-color: hsl(300, 43%, 22%);
   border-radius: 0.5rem;
   padding: 2rem;
+}
+.card__buyer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.card__buyer-avatar {
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.card__buyer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 .card__name {
   font-weight: 700;
 }
 .card__verified {
   color: hsl(333, 80%, 67%);
+}
+.card__review {
+  text-align: left;
+  line-height: 1.25rem;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
