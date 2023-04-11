@@ -62,7 +62,7 @@ body {
   border-radius: 0.5rem;
   padding: 2rem;
 }
-.card__buyer {
+.card__name {
   font-weight: 700;
 }
 .card__verified {
