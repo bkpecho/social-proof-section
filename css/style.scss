@@ -32,3 +32,11 @@ $ff-main: 'League Spartan', sans-serif;
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
+
+// Mixins
+
+@mixin flex($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
