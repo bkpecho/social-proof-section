@@ -60,21 +60,58 @@ body {
 }
 
 .card {
-  @include flex(column, 0);
+  @include flex(column, 2rem);
   padding: 5rem 2rem;
   text-align: center;
+
+  &__top-left {
+    @include flex(column, 1rem);
+  }
+
   &__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: $clr-primary-magenta;
     font-weight: $fw-bold;
   }
 
   &__paragraph {
     color: $clr-neutral-gray;
-    line-height: 1.25rem;
+    font-weight: $fw-medium;
+    line-height: 1.5rem;
   }
 
   &__top-right {
-    border: solid red;
+    @include flex(column, 1rem);
+
+    & .card__container {
+      padding: 1rem;
+      border-radius: 0.25rem;
+      background-color: $clr-neutral-light-gray;
+    }
+  }
+
+  &__rate {
+    margin-top: 0.5rem;
+    color: $clr-primary-magenta;
+    font-weight: $fw-bold;
+  }
+
+  &__bottom {
+    @include flex(column, 1rem);
+    & .card__container {
+      color: $clr-neutral-light;
+      background-color: $clr-primary-magenta;
+
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+  }
+
+  &__buyer {
+    font-weight: $fw-bold;
+  }
+
+  &__verified {
+    color: $clr-primary-pink;
   }
 }
