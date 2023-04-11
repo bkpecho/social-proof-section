@@ -51,6 +51,9 @@ html {
 }
 
 body {
+  @include flex(row, 0);
+  justify-content: center;
+  align-items: center;
   background-image: url(/images/bg-pattern-top-mobile.svg),
     url(/images/bg-pattern-bottom-mobile.svg);
   background-position: top left, bottom right;
@@ -61,23 +64,30 @@ body {
 
 .card {
   @include flex(column, 2rem);
-  padding: 5rem 2rem;
+  padding: 5rem 1.65rem 10rem 1.65rem;
   text-align: center;
 
+  max-width: 375px;
+
   &__top-left {
-    @include flex(column, 1rem);
+    @include flex(column, 1.35rem);
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 2.65rem;
     color: $clr-primary-magenta;
     font-weight: $fw-bold;
+
+    line-height: 80%;
+    letter-spacing: -1px;
   }
 
   &__paragraph {
     color: $clr-neutral-gray;
     font-weight: $fw-medium;
-    line-height: 1.5rem;
+    font-size: 1.23rem;
+    line-height: 1.65rem;
+    letter-spacing: -0.5px;
   }
 
   &__top-right {
@@ -87,52 +97,64 @@ body {
       padding: 1rem;
       border-radius: 0.25rem;
       background-color: $clr-neutral-light-gray;
+
+      & .card__stars {
+        @include flex(row, 0.5rem);
+        justify-content: center;
+      }
     }
   }
 
   &__rate {
-    margin-top: 0.75rem;
+    margin-top: 1rem;
     color: $clr-primary-magenta;
+    font-size: 1.15rem;
     font-weight: $fw-bold;
   }
 
   &__bottom {
     @include flex(column, 1rem);
+
     & .card__container {
       @include flex(column, 1.5rem);
       color: $clr-neutral-light;
       background-color: $clr-primary-magenta;
 
       border-radius: 0.5rem;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
     }
   }
 
   &__buyer {
-    @include flex(row, 1rem);
+    @include flex(row, 1.35rem);
     align-items: center;
 
     &-avatar {
-      height: 2.5rem;
+      height: 2.75rem;
       border-radius: 50%;
     }
 
     &-details {
-      @include flex(column, 0.25rem);
+      @include flex(column, 0.15rem);
+      align-items: flex-start;
     }
   }
 
   &__name {
+    font-size: 1.15rem;
     font-weight: $fw-bold;
   }
 
   &__verified {
+    font-size: 1.15rem;
     color: $clr-primary-pink;
   }
 
   &__review {
     text-align: left;
-    line-height: 1.25rem;
+    font-size: 1.16rem;
+    line-height: 1.45rem;
+    letter-spacing: -0.5px;
     font-weight: $fw-medium;
   }
 }
